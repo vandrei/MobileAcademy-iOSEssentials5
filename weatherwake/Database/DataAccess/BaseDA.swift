@@ -18,7 +18,7 @@ class BaseDA {
     }
     
     func save() {
-        commitDefaultMOC()
+        let _ = commitDefaultMOC()
     }
     
     func create() -> NSManagedObject {
