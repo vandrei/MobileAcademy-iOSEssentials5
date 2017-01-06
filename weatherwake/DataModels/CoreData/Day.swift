@@ -8,9 +8,7 @@
 
 import CoreData
 
-class Day: NSManagedObject {
-    @NSManaged var id: NSNumber!
-    @NSManaged var name: String!
-    
-    @NSManaged var alarm: Alarm!
+class Day: NSObject {
+    var id: NSNumber!
+    var name: String!
 }

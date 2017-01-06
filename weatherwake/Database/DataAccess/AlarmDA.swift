@@ -38,12 +38,12 @@ class AlarmDA: BaseDA {
     }
     
     func deleteAlarm(_ alarm:Alarm) {
-        super.deleteObject(alarm)
-        super.save()
+        //super.deleteObject(alarm)
+        //super.save()
     }
     
     func deleteAllAlarms() {
-        super.deleteObjects(getAllAlarms())
-        super.save()
+        //super.deleteObjects(getAllAlarms())
+        //super.save()
     }
 }

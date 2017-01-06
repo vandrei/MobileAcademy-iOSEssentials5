@@ -11,7 +11,9 @@ import UIKit
 class WeekdaysSelectorView: UIView {
     // TODO: Create an IBOutlet with an array for the buttons
     
+    @IBOutlet private var dayButtons:[UIButton]?
     
+    // MARK: Public Methods
     func getSelectedDays() -> [NSNumber] {
         // TODO: Iterate through the buttons in the array and add their tag to an array
         // TODO: Return the tags array
@@ -34,7 +36,9 @@ class WeekdaysSelectorView: UIView {
         }
     }
     
-    // TODO: Add an IBOutlet for the day button tap event
-    // TODO: Inverse the button's selected state
-    // TODO: Update button font according to its state
+    // MARK: UI Actions
+    @IBAction private func onDayTapped(button:UIButton) {
+        button.isSelected = !button.isSelected
+        configureButtonFont(button)
+    }
 }

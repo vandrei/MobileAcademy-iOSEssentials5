@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0D6FEC1E2032960054366C /* AlarmDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D6FE91E2032960054366C /* AlarmDetailsController.swift */; };
+		2D0D6FED1E2032960054366C /* AlarmListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D6FEA1E2032960054366C /* AlarmListController.swift */; };
+		2D0D6FF01E2032F90054366C /* AlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D6FEF1E2032F90054366C /* AlarmCell.swift */; };
 		2D6D29481CAD5869001A6B65 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D29471CAD5869001A6B65 /* Day.swift */; };
 		2D6D294A1CAD58F6001A6B65 /* DayDA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D29491CAD58F6001A6B65 /* DayDA.swift */; };
 		2D6D294C1CAD61B0001A6B65 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D294B1CAD61B0001A6B65 /* Fonts.swift */; };
@@ -47,6 +50,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D0D6FE91E2032960054366C /* AlarmDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmDetailsController.swift; sourceTree = "<group>"; };
+		2D0D6FEA1E2032960054366C /* AlarmListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmListController.swift; sourceTree = "<group>"; };
+		2D0D6FEF1E2032F90054366C /* AlarmCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmCell.swift; sourceTree = "<group>"; };
 		2D6D29471CAD5869001A6B65 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		2D6D29491CAD58F6001A6B65 /* DayDA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayDA.swift; sourceTree = "<group>"; };
 		2D6D294B1CAD61B0001A6B65 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 		2D6D29F61CADB4CA001A6B65 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				2D0D6FEF1E2032F90054366C /* AlarmCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -220,6 +227,8 @@
 		2DD8433F1CAD51E600E5778B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2D0D6FE91E2032960054366C /* AlarmDetailsController.swift */,
+				2D0D6FEA1E2032960054366C /* AlarmListController.swift */,
 				2DD843401CAD51E600E5778B /* Base */,
 			);
 			path = Controllers;
@@ -418,6 +427,7 @@
 				8C1E9AF21CB00C5C00E3DA9F /* NotificationsHandler.swift in Sources */,
 				2DD8432D1CAD4ACF00E5778B /* weatherwake.xcdatamodeld in Sources */,
 				8C1E9B001CB00C8500E3DA9F /* DayConverter.swift in Sources */,
+				2D0D6FF01E2032F90054366C /* AlarmCell.swift in Sources */,
 				2D6D294A1CAD58F6001A6B65 /* DayDA.swift in Sources */,
 				2D6D29511CAD6D56001A6B65 /* TimeField.swift in Sources */,
 				2D6D29F11CADA9DB001A6B65 /* Weekdays.swift in Sources */,
@@ -431,6 +441,8 @@
 				8C1E9ADB1CAE919800E3DA9F /* WeatherConditionType.swift in Sources */,
 				2DDDB1321CAD44AF00EAC327 /* AppDelegate.swift in Sources */,
 				2DD843421CAD51F900E5778B /* BaseController.swift in Sources */,
+				2D0D6FED1E2032960054366C /* AlarmListController.swift in Sources */,
+				2D0D6FEC1E2032960054366C /* AlarmDetailsController.swift in Sources */,
 				2DD8433A1CAD504A00E5778B /* AlarmDA.swift in Sources */,
 				2DD843381CAD4FEE00E5778B /* CoreDataManager.swift in Sources */,
 				2D6D294F1CAD6A0F001A6B65 /* WeekdaysSelectorView.swift in Sources */,

@@ -14,7 +14,7 @@ class WeatherCondition : NSObject {
     var minTemperature: Double!
     var maxTemperature: Double!
     
-    // TODO: Add weather condition member
+    var condition: WeatherConditionType!
     
     var city: String!
     var date: Date!

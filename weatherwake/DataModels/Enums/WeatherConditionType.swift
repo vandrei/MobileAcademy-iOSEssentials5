@@ -8,20 +8,36 @@
 
 import Foundation
 
-// TODO: Create a WeatherConditionType: String enum
-// Add following options:
-/*
- - clear sky
- - few clouds
- - scattered clouds
- - broken clouds
- - overcast clouds
- - mist
- - shower rain
- - rain
- - light rain
- - thunderstorm
- - snow
- */
+enum WeatherConditionType: String {
+    case Clear = "clear sky"
+    case FewClouds = "few clouds"
+    case ScatteredClouds = "scattered clouds"
+    case BrokenClouds = "broken clouds"
+    case OvercastClouds = "overcast clouds"
+    case Mist = "mist"
+    case Shower = "shower rain"
+    case Rain = "rain"
+    case LightRain = "light rain"
+    case Storm = "thunderstorm"
+    case Snow = "snow"
+}
 
-// TODO: Add a method that switches between conditionTypes in order to return the name of the condition's icon
+class WeatherConditionTypeEnum {
+    
+    static func getIconName(conditionType: WeatherConditionType) -> String {
+        switch conditionType {
+        case .Clear:
+            return "icon_w_s"
+        case .FewClouds, .OvercastClouds:
+            return "icon_w_cs"
+        case .ScatteredClouds, .BrokenClouds:
+            return "icon_w_c"
+        case .Shower, .Rain, .LightRain, .Storm:
+            return "icon_w_cr"
+        case .Snow:
+            return "icon_w_cw"
+        case .Mist:
+            return "icon_w_s"
+        }
+    }
+}

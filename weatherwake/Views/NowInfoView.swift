@@ -1,3 +1,4 @@
+
 //
 //  NowInfoView.swift
 //  weatherwake
@@ -8,7 +9,19 @@
 
 import UIKit
 
+@objc protocol loadDateProtocol {
+    func loadDateAndTime()
+}
+
 class NowInfoView: UIView {
+    
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var temperatureLabel: UILabel?
+    @IBOutlet var locationLabel: UILabel!
+    
+    @IBOutlet var conditionImageView: UIImageView?
+    
     var timer: Timer?
     
     override func awakeFromNib() {
@@ -19,22 +32,24 @@ class NowInfoView: UIView {
     }
     
     func initDateTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(loadDateAndTime), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(loadDateProtocol.loadDateAndTime), userInfo: nil, repeats: true)
     }
     
-    func loadWeatherCondition(_ condition: WeatherCondition) {
-        // TODO: Extract city name and temperature from condition model
+    func loadWeatherCondition(condition: WeatherCondition) {
+        locationLabel.text = condition.city
+        temperatureLabel?.text = condition.getTemperature()
         
-        // TODO: Get the necessary image for the current weather condition
-        // TODO: Set the image
+        let conditionImageName = WeatherConditionTypeEnum.getIconName(conditionType: condition.condition)
+        conditionImageView?.image = UIImage(named: conditionImageName)
     }
     
     func loadDateAndTime() {
-        // TODO: Get the current time/date
+        let date = Date()
         
-        // TODO: extract current time from the date using DateConverter
-        // TODO: extract current day from the date using DateConverter
+        let time = DateConverter.getTime(date)
+        let day = DateConverter.getDay(date)
         
-        // TODO: Set time and day on designated labels
+        timeLabel.text = time
+        dateLabel.text = day
     }
 }

@@ -8,7 +8,7 @@
 
 import CoreData
 
-class Alarm: NSManagedObject {
+class Alarm {
     var id: String!
     
     var name: String!
@@ -17,4 +17,12 @@ class Alarm: NSManagedObject {
     var isOn: NSNumber!
     
     var days: Set<Day>!
+    
+    init() {
+        id = "unknown"
+        name = "New Alarm"
+        sound = "default"
+        date = Date()
+        isOn = NSNumber(value: 1)
+    }
 }
