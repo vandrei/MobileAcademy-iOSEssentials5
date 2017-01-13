@@ -19,25 +19,31 @@ class WeatherCondition : NSObject {
     var city: String!
     var date: Date!
     
-    static func deserializeArray(_ json:[String: AnyObject]) -> [WeatherCondition]{
-        // TODO: Deserialize json array received as parameter
-        // TODO: Extract city information and the forecast array
-        // TODO: Iterate throught forecasts and create a new WeatherCondition
-        // TODO: Return an array of the create WeatherConditions
-        
-        return [WeatherCondition]()
-    }
-    
     init(json: [String : AnyObject]) {
-        // TODO: Deserialize the JSON received as parameter
-        // TODO: Extract temp, temp_min, temp_max, use the first WeatherCondition found
+        let mainJson = json["main"] as! [String : AnyObject]
+        temperature = mainJson["temp"] as! Double
+        minTemperature = mainJson["temp_min"] as! Double
+        maxTemperature = mainJson["temp_max"] as! Double
         
-        // TODO: Extract time from "dt", convert it to NSTimeInterval, make it a CDouble
-        // TODO: Create a NSDate with the epoch timestamp extracted
+        let weatherArray = json["weather"] as! [[String : AnyObject]]
+        let weatherJson = weatherArray.first
+        if (weatherJson != nil) {
+            let description: String = weatherJson!["description"] as! String
+            condition = WeatherConditionType(rawValue: description)
+        }
+        
+        let seconds: TimeInterval = CDouble((json["dt"] as! TimeInterval))
+        date = Date(timeIntervalSince1970: seconds)
+        
+        //This is added as a fail safe for a not expected weather condition. It would default to sunny.
+        if (condition == nil) {
+            condition = WeatherConditionType.Clear
+        }
     }
     
     func getTemperature() -> String {
-        // TODO: Create a string with the temperature and return it
-        return ""
+        let temperatureString = "\(Int(temperature))°C"
+        
+        return temperatureString
     }
 }

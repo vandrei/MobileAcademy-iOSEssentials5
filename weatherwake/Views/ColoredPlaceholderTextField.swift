@@ -8,8 +8,6 @@
 
 import UIKit
 
-// TODO: Use this class for the "Name" TextField on the Alarm Details Screen
-
 @IBDesignable
 class ColoredPlaceholderTextField: UITextField {
     @IBInspectable var placeholderColor: UIColor = UIColor.black {

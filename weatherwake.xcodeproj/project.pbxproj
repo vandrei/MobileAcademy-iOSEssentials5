@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271FFBFF9FEDFB683717BCA1 /* Pods_weatherwake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A5DC0DC16912A22F6C593F /* Pods_weatherwake.framework */; };
 		2D0D6FEC1E2032960054366C /* AlarmDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D6FE91E2032960054366C /* AlarmDetailsController.swift */; };
 		2D0D6FED1E2032960054366C /* AlarmListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D6FEA1E2032960054366C /* AlarmListController.swift */; };
 		2D0D6FF01E2032F90054366C /* AlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D6FEF1E2032F90054366C /* AlarmCell.swift */; };
@@ -22,6 +23,9 @@
 		2D771B3B1CAE8FE6006668CF /* SuperRingtone.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2D771B381CAE8FE6006668CF /* SuperRingtone.caf */; };
 		2D771B3D1CAE9279006668CF /* NowInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D771B3C1CAE9279006668CF /* NowInfoView.swift */; };
 		2D771B491CAEAED2006668CF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D771B481CAEAED2006668CF /* AVFoundation.framework */; };
+		2DA765E01E2946EA00CA45CD /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA765DE1E2946EA00CA45CD /* BaseAPI.swift */; };
+		2DA765E11E2946EA00CA45CD /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA765DF1E2946EA00CA45CD /* WeatherAPI.swift */; };
+		2DA765E41E29479300CA45CD /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA765E31E29479300CA45CD /* AlertHelper.swift */; };
 		2DD8432D1CAD4ACF00E5778B /* weatherwake.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DD843281CAD4ACF00E5778B /* weatherwake.xcdatamodeld */; };
 		2DD843321CAD4DC200E5778B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD843311CAD4DC200E5778B /* CoreData.framework */; };
 		2DD843361CAD4FAD00E5778B /* BaseDA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD843341CAD4FAD00E5778B /* BaseDA.swift */; };
@@ -65,6 +69,9 @@
 		2D771B381CAE8FE6006668CF /* SuperRingtone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SuperRingtone.caf; sourceTree = "<group>"; };
 		2D771B3C1CAE9279006668CF /* NowInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowInfoView.swift; sourceTree = "<group>"; };
 		2D771B481CAEAED2006668CF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2DA765DE1E2946EA00CA45CD /* BaseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		2DA765DF1E2946EA00CA45CD /* WeatherAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
+		2DA765E31E29479300CA45CD /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		2DD843291CAD4ACF00E5778B /* weatherwake.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = weatherwake.xcdatamodel; sourceTree = "<group>"; };
 		2DD843311CAD4DC200E5778B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2DD843341CAD4FAD00E5778B /* BaseDA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDA.swift; sourceTree = "<group>"; };
@@ -105,6 +112,7 @@
 				2D771B491CAEAED2006668CF /* AVFoundation.framework in Frameworks */,
 				8C1E9AD61CAE8A0200E3DA9F /* CoreLocation.framework in Frameworks */,
 				2DD843321CAD4DC200E5778B /* CoreData.framework in Frameworks */,
+				271FFBFF9FEDFB683717BCA1 /* Pods_weatherwake.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +186,14 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		2DA765E21E29478000CA45CD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2DA765E31E29479300CA45CD /* AlertHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		2DD843261CAD4ACF00E5778B /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +236,8 @@
 		2DD8432C1CAD4ACF00E5778B /* Webservices */ = {
 			isa = PBXGroup;
 			children = (
+				2DA765DE1E2946EA00CA45CD /* BaseAPI.swift */,
+				2DA765DF1E2946EA00CA45CD /* WeatherAPI.swift */,
 			);
 			path = Webservices;
 			sourceTree = "<group>";
@@ -284,6 +302,7 @@
 		2DDDB1301CAD44AF00EAC327 /* weatherwake */ = {
 			isa = PBXGroup;
 			children = (
+				2DA765E21E29478000CA45CD /* Helpers */,
 				2DDDB1311CAD44AF00EAC327 /* AppDelegate.swift */,
 				2DDDB1401CAD44B000EAC327 /* Info.plist */,
 				8C1E9AEC1CB00C0400E3DA9F /* DataConverters */,
@@ -353,9 +372,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DDDB1431CAD44B000EAC327 /* Build configuration list for PBXNativeTarget "weatherwake" */;
 			buildPhases = (
+				F5567A84669AF9F80A9DB1B6 /* [CP] Check Pods Manifest.lock */,
 				2DDDB12A1CAD44AF00EAC327 /* Sources */,
 				2DDDB12B1CAD44AF00EAC327 /* Frameworks */,
 				2DDDB12C1CAD44AF00EAC327 /* Resources */,
+				6DAE40FAF31796F4AB419E60 /* [CP] Embed Pods Frameworks */,
+				441AEEB2E6023997092474B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -419,6 +441,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		441AEEB2E6023997092474B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-weatherwake/Pods-weatherwake-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DAE40FAF31796F4AB419E60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-weatherwake/Pods-weatherwake-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5567A84669AF9F80A9DB1B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2DDDB12A1CAD44AF00EAC327 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -435,6 +505,7 @@
 				2D6D29551CAD9613001A6B65 /* ColoredPlaceholderTextField.swift in Sources */,
 				8C1E9AFC1CB00C7800E3DA9F /* NavigationManager.swift in Sources */,
 				8C1E9AFF1CB00C8500E3DA9F /* DateConverter.swift in Sources */,
+				2DA765E01E2946EA00CA45CD /* BaseAPI.swift in Sources */,
 				8C1E9AFB1CB00C7800E3DA9F /* LocationManager.swift in Sources */,
 				8C1E9AD91CAE8F0A00E3DA9F /* WeatherCondition.swift in Sources */,
 				2D6D294C1CAD61B0001A6B65 /* Fonts.swift in Sources */,
@@ -450,7 +521,9 @@
 				8C1E9AF31CB00C5C00E3DA9F /* NotificationsScheduler.swift in Sources */,
 				2D6D29481CAD5869001A6B65 /* Day.swift in Sources */,
 				2DD8433E1CAD50A300E5778B /* Alarm.swift in Sources */,
+				2DA765E11E2946EA00CA45CD /* WeatherAPI.swift in Sources */,
 				2D771B3D1CAE9279006668CF /* NowInfoView.swift in Sources */,
+				2DA765E41E29479300CA45CD /* AlertHelper.swift in Sources */,
 				8C1E9AF11CB00C5C00E3DA9F /* AlarmManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +594,7 @@
 		};
 		2DDDB1451CAD44B000EAC327 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DCDD46F7414D9F5A413B683 /* Pods-weatherwake.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = weatherwake/Info.plist;
